@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
-import ProductCatefory from '../components/ProductCategory'
+import ProductCategory from '../components/ProductCategory'
 
 const mapStateToProps = (state) => ({
-  counter: state.counter
+  category: 'IPhone'
 })
 
-export default connect(mapStateToProps)(ProductCatefory)
+export default connect(mapStateToProps)(ProductCategory)

@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ProductCategory = ({ cateory }) => (
-  <div>I choose {{ cateory }}</div>
+const ProductCategory = ({ category }) => (
+  <div>
+    I choose {category}
+  </div>
 )
 
 ProductCategory.propTypes = {
-  cateory: PropTypes.string
+  category: PropTypes.string
 }
 
 export default ProductCategory
