@@ -7,7 +7,7 @@ const mapDispatchToProps = {
 }
 
 const mapStateToProps = (state) => ({
-  selectedModel: state.model,
+  ticket: state.ticket,
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductModel)

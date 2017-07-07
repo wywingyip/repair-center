@@ -2,13 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router'
 
-const ProductCategory = ({ selectedCategory, setCategory }) => (
+const ProductCategory = ({ ticket, setCategory }) => (
   <div>
     <form>
-      {['Iphone', 'Macbook', 'IPad'].map((category, index) => (
+      {['IPhone', 'Macbook', 'IPad'].map((category, index) => (
         <div className='d-block' key={index}>
-          <input type='radio' name='category'
-            value={category} onClick={() => setCategory({ category })} />{category}
+          <input type='radio' name='category' value={category}
+            onChange={() => setCategory(category)}
+            checked={ticket.category === category} />{category}
         </div>
       ))}
       <Link to='/product-model' className='btn btn-primary'>Next</Link>
@@ -17,7 +18,7 @@ const ProductCategory = ({ selectedCategory, setCategory }) => (
 )
 
 ProductCategory.propTypes = {
-  selectedCategory: PropTypes.string,
+  ticket: PropTypes.object,
   setCategory: PropTypes.func
 }
 

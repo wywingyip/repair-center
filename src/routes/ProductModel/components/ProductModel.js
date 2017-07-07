@@ -1,21 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ProductModel = ({ selectedModel, setModel }) => (
+const ProductModel = ({ ticket, setModel }) => (
   <div>
     <form>
-      {['IPhone6', 'IPhone6s', 'IPhone7', 'IPhone6 Plus', 'IPhone6s Plus', 'IPhone7 Plus'].map((model) => (
+      {modelsForCategory(ticket.category).map((model) => (
         <div className='d-block' key={model}>
           <input type='radio' name='model' value={model}
-            onClick={() => setModel({ model })} />{model}
+            onChange={() => setModel(model)}
+            checked={ticket.model === model} />{model}
         </div>
       ))}
     </form>
   </div>
 )
 
+const models = {
+  IPhone: ['IPhone6', 'IPhone6s', 'IPhone7', 'IPhone6 Plus', 'IPhone6s Plus', 'IPhone7 Plus'],
+  Macbook: ['Macbook Pro', 'Macbook Air'],
+  IPad: ['IPad Pro', 'IPad', 'IPad mini'],
+}
+
+const modelsForCategory = (category) => {
+  return models[category] || models.IPhone
+}
+
 ProductModel.propTypes = {
-  selectedModel: PropTypes.string,
+  ticket: PropTypes.object,
   setModel: PropTypes.func
 }
 

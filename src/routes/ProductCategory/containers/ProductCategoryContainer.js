@@ -7,7 +7,7 @@ const mapDispatchToProps = {
 }
 
 const mapStateToProps = (state) => ({
-  selectedCategory: state.category,
+  ticket: state.ticket,
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductCategory)
