@@ -1,24 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router'
 
-const ProductCategory = ({ category }) => (
+const ProductCategory = ({ selectedCategory, setCategory }) => (
   <div>
     <form>
-      <div className='d-block'>
-        <input type='radio' name='category' value='IPhone' />IPhone
-      </div>
-      <div className='d-block'>
-        <input type='radio' name='category' value='Macbook' />Macbook
-      </div>
-      <div className='d-block'>
-        <input type='radio' name='category' value='IPad' />IPad
-      </div>
+      {['Iphone', 'Macbook', 'IPad'].map((category, index) => (
+        <div className='d-block' key={index}>
+          <input type='radio' name='category'
+            value={category} onClick={() => setCategory({ category })} />{category}
+        </div>
+      ))}
+      <Link to='/product-model' className='btn btn-primary'>Next</Link>
     </form>
   </div>
 )
 
 ProductCategory.propTypes = {
-  category: PropTypes.string
+  selectedCategory: PropTypes.string,
+  setCategory: PropTypes.func
 }
 
 export default ProductCategory
