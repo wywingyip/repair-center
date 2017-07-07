@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ProductCategory from '../components/ProductCategory'
-import { setCategory } from '../modules/productCategory'
+import { setCategory } from '../../../modules/ticket'
 
 const mapDispatchToProps = {
   setCategory

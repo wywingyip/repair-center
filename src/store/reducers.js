@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux'
 import locationReducer from './location'
+import ticketReducer from '../modules/ticket'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     location: locationReducer,
-    ...asyncReducers
+    ticket: ticketReducer
   })
 }
 

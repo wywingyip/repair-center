@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ProductModel from '../components/ProductModel'
-import { setModel } from '../modules/productModel'
+import { setModel } from '../../../modules/ticket'
 
 const mapDispatchToProps = {
   setModel
