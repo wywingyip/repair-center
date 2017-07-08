@@ -32,6 +32,7 @@ export function setDescription (description) {
 export const actions = {
   setCategory,
   setModel,
+  setDescription,
 }
 
 // ------------------------------------

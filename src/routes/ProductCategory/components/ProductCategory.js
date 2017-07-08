@@ -6,7 +6,8 @@ const ProductCategory = ({ ticket, setCategory }) => (
   <div>
     <form>
       {['IPhone', 'Macbook', 'IPad'].map((category, index) => (
-        <Link to='/product-model' className='btn btn-secondary d-block'
+        <Link to='/product-model'
+          className={`btn d-block btn-secondary ${category === ticket.category ? 'active' : ''}`}
           key={index} onClick={() => setCategory(category)}>{category}
         </Link>
       ))}

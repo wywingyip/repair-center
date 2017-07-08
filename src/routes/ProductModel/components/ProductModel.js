@@ -6,7 +6,8 @@ const ProductModel = ({ ticket, setModel }) => (
   <div>
     <form>
       {modelsForCategory(ticket.category).map((model, index) => (
-        <Link to='/issue-description' className='btn btn-secondary d-block'
+        <Link to='/issue-description'
+          className={`btn btn-secondary d-block  ${model === ticket.model ? 'active' : ''}`}
           key={index} onClick={() => setModel(model)}>{model}
         </Link>
       ))}
