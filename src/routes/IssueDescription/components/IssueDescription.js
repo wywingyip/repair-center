@@ -21,7 +21,7 @@ class issueDescription extends Component {
               className='form-control'
               onChange={this.handleChange} />
           </div>
-          <Link to='/' className='btn btn-primary'>Submit</Link>
+          <Link to='/ticket-summary' className='btn btn-primary'>Submit</Link>
         </form>
       </div>
     )
