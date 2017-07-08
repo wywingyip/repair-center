@@ -4,6 +4,7 @@ import Home from './Home'
 import ProductCategoryRoute from './ProductCategory'
 import ProductModelRoute from './ProductModel'
 import IssueDescriptionRoute from './IssueDescription'
+import TicketSummaryRoute from './TicketSummary'
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -16,6 +17,7 @@ export const createRoutes = (store) => ({
     ProductCategoryRoute(store),
     ProductModelRoute(store),
     IssueDescriptionRoute(store),
+    TicketSummaryRoute(store),
   ]
 })
 
