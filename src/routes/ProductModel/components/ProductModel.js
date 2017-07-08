@@ -5,12 +5,10 @@ import { Link } from 'react-router'
 const ProductModel = ({ ticket, setModel }) => (
   <div>
     <form>
-      {modelsForCategory(ticket.category).map((model) => (
-        <div className='d-block' key={model}>
-          <input type='radio' name='model' value={model}
-            onChange={() => setModel(model)}
-            checked={ticket.model === model} />{model}
-        </div>
+      {modelsForCategory(ticket.category).map((model, index) => (
+        <Link to='/issue-description' className='btn btn-secondary d-block'
+          key={index} onClick={() => setModel(model)}>{model}
+        </Link>
       ))}
       <Link to='/issue-description' className='btn btn-primary'>Next</Link>
     </form>

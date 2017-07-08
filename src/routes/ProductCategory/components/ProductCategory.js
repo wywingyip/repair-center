@@ -6,13 +6,10 @@ const ProductCategory = ({ ticket, setCategory }) => (
   <div>
     <form>
       {['IPhone', 'Macbook', 'IPad'].map((category, index) => (
-        <div className='d-block' key={index}>
-          <input type='radio' name='category' value={category}
-            onChange={() => setCategory(category)}
-            checked={ticket.category === category} />{category}
-        </div>
+        <Link to='/product-model' className='btn btn-secondary d-block'
+          key={index} onClick={() => setCategory(category)}>{category}
+        </Link>
       ))}
-      <Link to='/product-model' className='btn btn-primary'>Next</Link>
     </form>
   </div>
 )

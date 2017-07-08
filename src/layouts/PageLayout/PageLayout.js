@@ -9,12 +9,8 @@ export const PageLayout = ({ children }) => (
     <IndexLink to='/' activeClassName='page-layout__nav-item--active'>Home</IndexLink>
     {' · '}
     <Link to='/product-category' activeClassName='page-layout__nav-item--active'>Store</Link>
-    <div className='page-layout__viewport text-left'>
-      <div className='row'>
-        <div className='.col-md-3 .offset-md-3'>
-          {children}
-        </div>
-      </div>
+    <div className='page-layout__viewport'>
+      {children}
     </div>
   </div>
 )
