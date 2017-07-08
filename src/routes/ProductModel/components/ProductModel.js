@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router'
 
 const ProductModel = ({ ticket, setModel }) => (
   <div>
@@ -11,6 +12,7 @@ const ProductModel = ({ ticket, setModel }) => (
             checked={ticket.model === model} />{model}
         </div>
       ))}
+      <Link to='/issue-description' className='btn btn-primary'>Next</Link>
     </form>
   </div>
 )
