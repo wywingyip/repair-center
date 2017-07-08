@@ -1,4 +1,4 @@
-# Repair store
+# Repair center
 
 A workshop for [WOMEN WHO CODE Sydney](https://www.womenwhocode.com/sydney), which will be held on July 12th 2017.
 
