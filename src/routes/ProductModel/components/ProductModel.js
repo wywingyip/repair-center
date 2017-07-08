@@ -11,7 +11,6 @@ const ProductModel = ({ ticket, setModel }) => (
           key={index} onClick={() => setModel(model)}>{model}
         </Link>
       ))}
-      <Link to='/issue-description' className='btn btn-primary'>Next</Link>
     </form>
   </div>
 )

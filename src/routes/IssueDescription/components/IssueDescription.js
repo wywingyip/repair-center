@@ -9,12 +9,16 @@ class issueDescription extends Component {
   }
 
   render () {
+    const { ticket } = this.props
     return (
       <div>
         <form>
           <div className='d-block'>
-            <textarea name='description' placeholder='describe your issue'
+            <textarea name='description'
+              placeholder='describe your issue'
               rows='3' cols='50'
+              defaultValue={ticket.description}
+              className='form-control'
               onChange={this.handleChange} />
           </div>
           <Link to='/' className='btn btn-primary'>Submit</Link>
@@ -25,6 +29,7 @@ class issueDescription extends Component {
 }
 
 issueDescription.propTypes = {
+  ticket: PropTypes.object,
   setDescription: PropTypes.func
 }
 
