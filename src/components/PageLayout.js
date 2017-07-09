@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import Redux from '../../routes/home/assets/redux.png'
-import './PageLayout.scss'
+import Redux from '../assets/redux.png'
+import '../styles/PageLayout.scss'
 
 export const PageLayout = ({ children }) => (
   <div className='container text-center'>

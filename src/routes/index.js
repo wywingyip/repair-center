@@ -1,16 +1,16 @@
 // We only need to import the modules necessary for initial render
-import CoreLayout from '../layouts/PageLayout/PageLayout'
+import CoreLayout from '../components/PageLayout'
 import React from 'react'
 import { Route } from 'react-router'
-import HomeView from './Home/components/HomeView'
-import ProductCategoryContainer from './ProductCategory/containers/ProductCategoryContainer'
-import ProductModelContainer from './ProductModel/containers/ProductModelContainer'
-import IssueDescriptionContainer from './IssueDescription/containers/IssueDescriptionContainer'
-import TicketSummaryContainer from './TicketSummary/containers/TicketSummaryContainer'
+import Home from '../components/Home'
+import ProductCategoryContainer from '../containers/ProductCategoryContainer'
+import ProductModelContainer from '../containers/ProductModelContainer'
+import IssueDescriptionContainer from '../containers/IssueDescriptionContainer'
+import TicketSummaryContainer from '../containers/TicketSummaryContainer'
 
 export default (
   <CoreLayout>
-    <Route exact path='/' component={HomeView} />
+    <Route exact path='/' component={Home} />
     <Route path='/product-category' component={ProductCategoryContainer} />
     <Route path='/product-model' component={ProductModelContainer} />
     <Route path='/issue-description' component={IssueDescriptionContainer} />

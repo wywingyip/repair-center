@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import ProductCategory from '../components/ProductCategory'
-import { setCategory } from '../../../modules/ticket'
+import { setCategory } from '../actionsAndReducers/ticket'
 
 const mapDispatchToProps = {
   setCategory

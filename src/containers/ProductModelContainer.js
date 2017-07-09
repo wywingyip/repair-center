@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ProductModel from '../components/ProductModel'
-import { setModel } from '../../../modules/ticket'
+import { setModel } from '../actionsAndReducers/ticket'
 
 const mapStateToProps = (state) => ({
   ticket: state.ticket,
