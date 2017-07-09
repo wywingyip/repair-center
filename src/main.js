@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import createStore from './store/createStore'
+import createStore, { history } from './store/createStore'
 import './styles/main.scss'
 
 // Store Initialization
@@ -16,7 +16,7 @@ let render = () => {
   const routes = require('./routes/index').default
 
   ReactDOM.render(
-    <App store={store} routes={routes} />,
+    <App store={store} routes={routes} history={history} />,
     MOUNT_NODE
   )
 }
@@ -46,10 +46,10 @@ if (__DEV__) {
       './components/App',
       './routes/index',
     ], () =>
-      setImmediate(() => {
-        ReactDOM.unmountComponentAtNode(MOUNT_NODE)
-        render()
-      })
+        setImmediate(() => {
+          ReactDOM.unmountComponentAtNode(MOUNT_NODE)
+          render()
+        })
     )
   }
 }

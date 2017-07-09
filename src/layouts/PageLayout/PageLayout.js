@@ -1,5 +1,5 @@
 import React from 'react'
-import { IndexLink } from 'react-router'
+import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Redux from '../../routes/home/assets/redux.png'
 import './PageLayout.scss'
@@ -10,7 +10,7 @@ export const PageLayout = ({ children }) => (
       Welcome to our repair center
       <img className='icon' src={Redux} />
     </h3>
-    <IndexLink to='/' activeClassName='page-layout__nav-item--active'>Home</IndexLink>
+    <NavLink to='/' activeClassName='page-layout__nav-item--active'>Home</NavLink>
     <div className='page-layout__viewport'>
       {children}
     </div>

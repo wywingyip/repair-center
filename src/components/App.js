@@ -1,12 +1,13 @@
 import React from 'react'
-import { browserHistory, Router } from 'react-router'
 import { Provider } from 'react-redux'
 import PropTypes from 'prop-types'
+import { ConnectedRouter } from 'react-router-redux'
 
 class App extends React.Component {
   static propTypes = {
     store: PropTypes.object.isRequired,
     routes: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
   }
 
   shouldComponentUpdate () {
@@ -14,13 +15,13 @@ class App extends React.Component {
   }
 
   render () {
-    const { store, routes } = this.props
+    const { store, history, routes } = this.props
     return (
       <Provider store={store}>
         <div style={{ height: '100%' }}>
-          <Router history={browserHistory} >
+          <ConnectedRouter history={history} >
             {routes}
-          </Router>
+          </ConnectedRouter>
         </div>
       </Provider>
     )

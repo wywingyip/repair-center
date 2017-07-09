@@ -1,13 +1,17 @@
 import { applyMiddleware, compose, createStore as createReduxStore, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
-import locationReducer from './location'
 import ticketReducer from '../modules/ticket'
+import createHistory from 'history/createBrowserHistory'
+import { routerReducer, routerMiddleware } from 'react-router-redux'
+
+// Create a history of your choosing (we're using a browser history in this case)
+export const history = createHistory()
 
 const createStore = (initialState = {}) => {
   // ======================================================
   // Middleware Configuration
   // ======================================================
-  const middleware = [thunk]
+  const middleware = [thunk, routerMiddleware(history)]
 
   // ======================================================
   // Store Enhancers
@@ -26,7 +30,7 @@ const createStore = (initialState = {}) => {
   // ======================================================
   const store = createReduxStore(
     combineReducers({
-      location: locationReducer,
+      location: routerReducer,
       ticket: ticketReducer
     }),
     initialState,
