@@ -1,7 +1,6 @@
 import { applyMiddleware, compose, createStore as createReduxStore, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
-import { browserHistory } from 'react-router'
-import locationReducer, { updateLocation } from './location'
+import locationReducer from './location'
 import ticketReducer from '../modules/ticket'
 
 const createStore = (initialState = {}) => {
@@ -36,9 +35,6 @@ const createStore = (initialState = {}) => {
       ...enhancers
     )
   )
-
-  // To unsubscribe, invoke `store.unsubscribeHistory()` anytime
-  store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
 
   return store
 }

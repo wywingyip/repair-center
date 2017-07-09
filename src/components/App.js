@@ -14,10 +14,13 @@ class App extends React.Component {
   }
 
   render () {
+    const { store, routes } = this.props
     return (
-      <Provider store={this.props.store}>
+      <Provider store={store}>
         <div style={{ height: '100%' }}>
-          <Router history={browserHistory} children={this.props.routes} />
+          <Router history={browserHistory} >
+            {routes}
+          </Router>
         </div>
       </Provider>
     )
