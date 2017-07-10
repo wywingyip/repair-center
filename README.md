@@ -60,7 +60,7 @@ The owner of the repair center has requested to build the web app with some sort
 
 Example flow is like this:
 
-![Repair Center example flow](https://raw.githubusercontent.com/jchappypig/repair-center/master/src/assets/tutorial/repair-center.png)
+![Repair Center example flow](https://raw.githubusercontent.com/jchappypig/repair-center/master/src/assets/repair-center.png)
 
 
 ## Reference
